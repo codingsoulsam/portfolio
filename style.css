@@ -246,8 +246,8 @@ nav {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     position: relative;
-    overflow: hidden;
-    margin-top: 1rem;
+    overflow: visible;
+    margin-top: 1.5rem;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
@@ -265,6 +265,7 @@ nav {
     width: 0;
     transition: width 0.8s ease-in-out;
     position: relative;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
 }
 
 .progress-fill::after {
@@ -274,7 +275,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     border-radius: 10px;
     animation: shimmer 2s infinite;
 }
@@ -287,17 +288,23 @@ nav {
 
 .progress-text {
     position: absolute;
-    top: -25px;
+    top: -30px;
     right: 0;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #6366f1;
     font-weight: 600;
     opacity: 0;
-    transition: opacity 0.3s ease 0.3s;
+    transform: translateY(10px);
+    transition: all 0.3s ease 0.2s;
+    background: rgba(15, 15, 35, 0.8);
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .skill-card:hover .progress-text {
     opacity: 1;
+    transform: translateY(0);
 }
 
 /* Projects Section */

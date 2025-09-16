@@ -61,17 +61,36 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('.skill-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         const progressFill = this.querySelector('.progress-fill');
+        const progressText = this.querySelector('.progress-text');
         const width = progressFill.getAttribute('data-width');
+        
+        // Reset progress first
+        progressFill.style.width = '0%';
         
         // Add a small delay to create a nice effect
         setTimeout(() => {
             progressFill.style.width = width + '%';
-        }, 100);
+        }, 150);
+        
+        // Show percentage text
+        if (progressText) {
+            progressText.style.opacity = '1';
+            progressText.style.transform = 'translateY(0)';
+        }
     });
 
     card.addEventListener('mouseleave', function() {
         const progressFill = this.querySelector('.progress-fill');
+        const progressText = this.querySelector('.progress-text');
+        
+        // Hide progress bar
         progressFill.style.width = '0%';
+        
+        // Hide percentage text
+        if (progressText) {
+            progressText.style.opacity = '0';
+            progressText.style.transform = 'translateY(10px)';
+        }
     });
 });
 
