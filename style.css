@@ -477,3 +477,19 @@ html {
 section {
     scroll-margin-top: 80px;
 }
+.logo{
+display:flex;
+align-items:center;
+font-weight:bold;
+font-size:22px;
+}
+
+.nav-logo{
+height:40px;
+margin-right:10px;
+}
+
+.hero-logo{
+width:120px;
+margin-bottom:20px;
+}
